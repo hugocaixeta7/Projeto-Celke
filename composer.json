@@ -1,0 +1,16 @@
+{
+    "description": "Projeto Celke",
+    "authors": [
+        {
+            "name": "Hugo Caixeta",
+            "email": "Hugoccaixeta3@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Core\\": "core",
+            "App\\": "app"
+        }
+    },
+    "require": {}
+}
