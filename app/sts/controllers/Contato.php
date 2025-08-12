@@ -2,14 +2,17 @@
 
 namespace App\sts\Controllers;
 
-if(!defined('URL')){
+if(!defined('48b5t9')){
     header("Location: /");
     die("Erro: Página não encontrada");
 }
 
 class Contato
 {
+    private array $dados;
     public function index() {
-        echo "Página Contato!<br>";
+        $this->dados = [];
+        $carregarView = new \Core\ConfigView("sts/Views/contato/contato", $this->dados);
+        $carregarView->renderizar();
     }
 }

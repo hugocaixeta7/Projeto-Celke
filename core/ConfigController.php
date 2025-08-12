@@ -1,8 +1,12 @@
 <?php
-
 namespace Core;
 
-class ConfigController
+if(!defined('48b5t9')){
+    header("Location: /");
+    die("Erro: Página não encontrada");
+}
+
+class ConfigController extends Config
 {
     private string $url;
     private array $urlConjunto;
@@ -11,13 +15,15 @@ class ConfigController
     private string $urlSlugController;
 
     public function __construct() {
+        $config = new \Core\Config();
+        $config->config();
         $urlInput = filter_input(INPUT_GET, "url", FILTER_DEFAULT);
 
         if (!empty($urlInput)) {
             $this->url = $urlInput;
-            echo "URL: {$this->url} <br>";
+            //echo "URL: {$this->url} <br>";
             $this->limparUrl();
-            echo "URL Limpa: {$this->url} <br>";
+            //echo "URL Limpa: {$this->url} <br>";
 
             $this->urlConjunto = explode("/", $this->url);
 
