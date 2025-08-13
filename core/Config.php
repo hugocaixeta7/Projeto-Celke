@@ -21,5 +21,7 @@ class Config
         define('DBNAME', 'celke');
         define('PORT', 3306);
 
+        define('EMAILADM', 'cesar@celke.com.br');
+
     }
 }
